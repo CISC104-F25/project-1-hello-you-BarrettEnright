@@ -1,13 +1,150 @@
-[gd_scene load_steps=3 format=3 uid="uid://clwrsdsnmy3md"]
+[gd_scene load_steps=13 format=3 uid="uid://clwrsdsnmy3md"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6jki"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ys316"]
 albedo_color = Color(0.21448, 0.1344, 0.28, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6jki"]
+albedo_color = Color(0.176471, 0.32549, 0.0156863, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ys316"]
+material = SubResource("StandardMaterial3D_m6jki")
+size = Vector2(6, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_to4tk"]
+albedo_color = Color(0.881951, 0.894643, 3.85046e-07, 1)
+metallic = 0.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0jsbj"]
+material = SubResource("StandardMaterial3D_to4tk")
+height = 4.97
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_q6bo7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eso0h"]
+albedo_color = Color(0.882353, 0.894118, 0, 1)
+albedo_texture = SubResource("CanvasTexture_q6bo7")
+metallic = 0.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_trumw"]
+material = SubResource("StandardMaterial3D_eso0h")
+bottom_radius = 0.4
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_e7awo"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_j0tu7"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3xb3d"]
+
 [node name="Part_A" type="Node3D"]
 
 [node name="PlaceholderFloor" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.67902, 0, 0, 0, 1, 0, 0, 0, 2.65012, 0, 0, 0)
+transform = Transform3D(2.67902, 0, 0, 0, 1, 0, 0, 0, 2.65012, -0.0089879, 0.0238931, -0.00754881)
 mesh = SubResource("PlaneMesh_m6jki")
 surface_material_override/0 = SubResource("StandardMaterial3D_ys316")
+
+[node name="Big floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.67902, 0, 0, 0, 1, 0, 0, 0, 2.65012, -0.00346583, 0.029474, -0.00659442)
+mesh = SubResource("PlaneMesh_ys316")
+skeleton = NodePath("../PlaceholderFloor")
+
+[node name="Pole Home" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.2, 0, 0, 0, 0.1, -7.96545, 0.524585, 0.000113487)
+mesh = SubResource("CylinderMesh_0jsbj")
+
+[node name="Pole Home 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0422618, 0.0634415, 0, -0.0906308, 0.0295833, 0, 0, 0, 0.1, -7.923, 1.016, 0)
+mesh = SubResource("CylinderMesh_trumw")
+
+[node name="Pole Home 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.07, 0, 0, 0, 0.3, 0, 0, 0, 0.07, -7.83871, 1.78113, 0.714705)
+mesh = SubResource("CylinderMesh_0jsbj")
+
+[node name="Pole Home 4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.07, 0, 0, 0, 0.3, 0, 0, 0, 0.07, -7.83871, 1.78113, -0.715184)
+mesh = SubResource("CylinderMesh_0jsbj")
+
+[node name="Pole Home Crossbar" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.07, 0, 0, 0, -1.31134e-08, -0.07, 0, 0.3, -3.0598e-09, 7.839, 1.061, 0)
+mesh = SubResource("CylinderMesh_0jsbj")
+
+[node name="Pole Away Crossbar" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.07, 0, 0, 0, -1.31134e-08, -0.07, 0, 0.3, -3.0598e-09, -7.83871, 1.0607, 0)
+mesh = SubResource("CylinderMesh_0jsbj")
+
+[node name="Pole Away" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.2, 0, 0, 0, 0.1, 7.965, 0.525, 0)
+mesh = SubResource("CylinderMesh_0jsbj")
+
+[node name="Pole Away 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0422618, -0.0634415, 0, 0.0906308, 0.0295833, 0, 0, 0, 0.1, 7.92321, 1.01572, 0.00381088)
+mesh = SubResource("CylinderMesh_trumw")
+
+[node name="Pole Away 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.07, 0, 0, 0, 0.3, 0, 0, 0, 0.07, 7.839, 1.781, 0.715)
+mesh = SubResource("CylinderMesh_0jsbj")
+
+[node name="Pole Away 4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.07, 0, 0, 0, 0.3, 0, 0, 0, 0.07, 7.839, 1.781, -0.715)
+mesh = SubResource("CylinderMesh_0jsbj")
+
+[node name="Sideline 1" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.04, 0, 0, 0, 0.5, 0, 0, 0, 0.15, 0, 0.038902, -2.51234)
+mesh = SubResource("PlaneMesh_e7awo")
+
+[node name="Sideline 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.04, 0, 0, 0, 0.5, 0, 0, 0, 0.15, 0, 0.035578, 2.49785)
+mesh = SubResource("PlaneMesh_e7awo")
+
+[node name="Sideline Endzone 1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.5, 0, 0, 0, 2.5, -7.89075, 0.0355484, 0.000297308)
+mesh = SubResource("PlaneMesh_j0tu7")
+
+[node name="Sideline Endzone 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.5, 0, 0, 0, 2.5, 7.8872, 0.0355484, 0.000297308)
+mesh = SubResource("PlaneMesh_j0tu7")
+
+[node name="Yard line" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, -6.678, 0.031425, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Yard line2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, 6.678, 0.031, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Yard line3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, 0, 0.031, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Yard line4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, -1.31759, 0.031, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Yard line5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, -2.65686, 0.031, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Yard line6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, -4.04754, 0.031, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Yard line7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, -5.3138, 0.031, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Yard line8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, 1.318, 0.031, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Yard line9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, 2.657, 0.031, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Yard line10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, 4.048, 0.031, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Yard line11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, 5.314, 0.031, 0)
+mesh = SubResource("PlaneMesh_3xb3d")
