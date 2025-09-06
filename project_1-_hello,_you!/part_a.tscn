@@ -1,6 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://clwrsdsnmy3md"]
+[gd_scene load_steps=18 format=3 uid="uid://clwrsdsnmy3md"]
 
 [ext_resource type="PackedScene" uid="uid://4sy4oeoj170" path="res://part_b.tscn" id="1_ys316"]
+[ext_resource type="PackedScene" uid="uid://clhttn3a0ep70" path="res://part_c.tscn" id="2_to4tk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ys316"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_to4tk"]
+sky_material = SubResource("ProceduralSkyMaterial_ys316")
+
+[sub_resource type="Environment" id="Environment_0jsbj"]
+background_mode = 2
+sky = SubResource("Sky_to4tk")
+tonemap_mode = 2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6jki"]
 
@@ -40,6 +53,13 @@ bottom_radius = 0.4
 [sub_resource type="PlaneMesh" id="PlaneMesh_3xb3d"]
 
 [node name="Part_A" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0jsbj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
 
 [node name="PlaceholderFloor" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.67902, 0, 0, 0, 1, 0, 0, 0, 2.65012, -0.0089879, 0.0238931, -0.00754881)
@@ -152,13 +172,18 @@ transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, 5.314, 0.031, 0)
 mesh = SubResource("PlaneMesh_3xb3d")
 
 [node name="Bench 1" parent="." instance=ExtResource("1_ys316")]
-transform = Transform3D(6.18019, 0, 0, 0, 4.8667, 0, 0, 0, 4.74854, 5.58684, -0.129758, 3.355)
+transform = Transform3D(6.18019, 0, 0, 0, 4.8667, 0, 0, 0, 4.74854, 5.58684, -0.243927, 3.355)
 
 [node name="Bench 2" parent="." instance=ExtResource("1_ys316")]
-transform = Transform3D(-6.18019, 0, -4.15131e-07, 0, 4.8667, 0, 5.40289e-07, 0, -4.74854, 5.587, -0.13, -3.355)
+transform = Transform3D(-6.18019, 0, -4.15131e-07, 0, 4.8667, 0, 5.40289e-07, 0, -4.74854, 5.587, -0.244, -3.355)
 
 [node name="Bench 3" parent="." instance=ExtResource("1_ys316")]
-transform = Transform3D(6.18019, 0, 0, 0, 4.8667, 0, 0, 0, 4.74854, -5.587, -0.13, 3.355)
+transform = Transform3D(6.18019, 0, 0, 0, 4.8667, 0, 0, 0, 4.74854, -5.587, -0.244, 3.355)
 
 [node name="Bench 4" parent="." instance=ExtResource("1_ys316")]
-transform = Transform3D(-6.18019, 0, -4.15131e-07, 0, 4.8667, 0, 5.40289e-07, 0, -4.74854, -5.587, -0.13, -3.355)
+transform = Transform3D(-6.18019, 0, -4.15131e-07, 0, 4.8667, 0, 5.40289e-07, 0, -4.74854, -5.587, -0.244, -3.355)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.972055, 0.234752, 0, -0.234752, 0.972055, 0, 2.98307, 6.83177)
+
+[node name="Part_C" parent="." instance=ExtResource("2_to4tk")]

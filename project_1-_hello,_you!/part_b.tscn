@@ -18,56 +18,56 @@ albedo_color = Color(0.290196, 0.309804, 0.286275, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_3sstj"]
 material = SubResource("StandardMaterial3D_id878")
 
-[node name="Part_B" type="Node3D"]
+[node name="Bench" type="Node3D"]
 
 [node name="Bench Seat" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 0.003, 0, 0, 0, 0.015, 0, 0.0499288, 0.00248639)
+transform = Transform3D(0.45055, 0, 0, 0, 0.00603511, 0, 0, 0, 0.0221822, -0.00134831, 0.0876668, 0.000944297)
 mesh = SubResource("BoxMesh_gn0ur")
 
 [node name="Bench Back Support 1" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.004, 0, 0, 0, 0.0128735, -0.000139173, 0, 0.00180925, 0.000990268, 0.1, 0.0571846, 0.011)
+transform = Transform3D(0.00600733, 0, 0, 0, 0.0274672, -0.000181441, 0, 0.00386026, 0.00129102, 0.148835, 0.102263, 0.0135343)
 mesh = SubResource("BoxMesh_nsn63")
 
 [node name="Bench Back Support 2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.004, 0, 0, 0, 0.0128735, -0.000139173, 0, 0.00180925, 0.000990268, 0, 0.057, 0.011)
+transform = Transform3D(0.00600733, 0, 0, 0, 0.0274672, -0.000181441, 0, 0.00386026, 0.00129102, -0.00134831, 0.101892, 0.0135343)
 mesh = SubResource("BoxMesh_nsn63")
 
 [node name="Bench Back Support 3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.004, 0, 0, 0, 0.0128735, -0.000139173, 0, 0.00180925, 0.000990268, -0.1, 0.057, 0.011)
+transform = Transform3D(0.00600733, 0, 0, 0, 0.0274672, -0.000181441, 0, 0.00386026, 0.00129102, -0.151532, 0.101892, 0.0135343)
 mesh = SubResource("BoxMesh_nsn63")
 
 [node name="Bench Back" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, -0.00059475, -0.0143214, 0, 0.00190952, -0.00446062, 0, 0.0652307, 0.0117558)
+transform = Transform3D(0.45055, 0, 0, 0, -0.00109861, -0.0240618, 0, 0.00352725, -0.00749441, -0.00134831, 0.11845, 0.014652)
 mesh = SubResource("BoxMesh_gn0ur")
 
 [node name="Bench Leg 1" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.002, 0, 0, 0, 0.015, 0, 0, 0, 0.005, -0.146226, 0.0416362, 0.00230064)
+transform = Transform3D(0.00300367, 0, 0, 0, 0.0301755, 0, 0, 0, 0.00739407, -0.220956, 0.0709847, 0.000669615)
 mesh = SubResource("BoxMesh_3sstj")
 
 [node name="Bench Leg 2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.002, 0, 0, 0, 0.015, 0, 0, 0, 0.005, 0.146, 0.042, 0.002)
+transform = Transform3D(0.00300367, 0, 0, 0, 0.0301755, 0, 0, 0, 0.00739407, 0.217919, 0.0717165, 0.000225024)
 mesh = SubResource("BoxMesh_3sstj")
 
 [node name="Bench Leg 3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.002, 0, 0, 0, 0.015, 0, 0, 0, 0.005, 0.0378219, 0.042, 0.002)
+transform = Transform3D(0.00300367, 0, 0, 0, 0.0301755, 0, 0, 0, 0.00739407, 0.0554538, 0.0717165, 0.000225024)
 mesh = SubResource("BoxMesh_3sstj")
 
 [node name="Bench Leg 4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.002, 0, 0, 0, 0.015, 0, 0, 0, 0.005, -0.038, 0.042, 0.002)
+transform = Transform3D(0.00300367, 0, 0, 0, 0.0301755, 0, 0, 0, 0.00739407, -0.058418, 0.0717165, 0.000225024)
 mesh = SubResource("BoxMesh_3sstj")
 
 [node name="Bench Leg 5" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.005, 0, 0, 0, 0.002, 0, 0, 0, 0.01, 0.146, 0.035486, 0.00199777)
+transform = Transform3D(0.00750916, 0, 0, 0, 0.0040234, 0, 0, 0, 0.0147881, 0.217919, 0.0586123, 0.00022173)
 mesh = SubResource("BoxMesh_3sstj")
 
 [node name="Bench Leg 6" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.005, 0, 0, 0, 0.002, 0, 0, 0, 0.01, 0.038, 0.035, 0.002)
+transform = Transform3D(0.00750916, 0, 0, 0, 0.0040234, 0, 0, 0, 0.0147881, 0.0557213, 0.0576346, 0.000225024)
 mesh = SubResource("BoxMesh_3sstj")
 
 [node name="Bench Leg 7" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.005, 0, 0, 0, 0.002, 0, 0, 0, 0.01, -0.038, 0.035, 0.002)
+transform = Transform3D(0.00750916, 0, 0, 0, 0.0040234, 0, 0, 0, 0.0147881, -0.058418, 0.0576346, 0.000225024)
 mesh = SubResource("BoxMesh_3sstj")
 
 [node name="Bench Leg 8" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.005, 0, 0, 0, 0.002, 0, 0, 0, 0.01, -0.146, 0.035, 0.002)
+transform = Transform3D(0.00750916, 0, 0, 0, 0.0040234, 0, 0, 0, 0.0147881, -0.220616, 0.0576346, 0.000225024)
 mesh = SubResource("BoxMesh_3sstj")
