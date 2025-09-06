@@ -1,8 +1,73 @@
-[gd_scene load_steps=2 format=3 uid="uid://4sy4oeoj170"]
+[gd_scene load_steps=7 format=3 uid="uid://4sy4oeoj170"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_vq3a5"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vq3a5"]
+albedo_color = Color(0.290196, 0.309804, 0.286275, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gn0ur"]
+material = SubResource("StandardMaterial3D_vq3a5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6u1k"]
+albedo_color = Color(0.290343, 0.310605, 0.284647, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nsn63"]
+material = SubResource("StandardMaterial3D_u6u1k")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_id878"]
+albedo_color = Color(0.290196, 0.309804, 0.286275, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3sstj"]
+material = SubResource("StandardMaterial3D_id878")
 
 [node name="Part_B" type="Node3D"]
 
-[node name="PlaceholderCube" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_vq3a5")
+[node name="Bench Seat" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.003, 0, 0, 0, 0.015, 0, 0.0499288, 0.00248639)
+mesh = SubResource("BoxMesh_gn0ur")
+
+[node name="Bench Back Support 1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.004, 0, 0, 0, 0.0128735, -0.000139173, 0, 0.00180925, 0.000990268, 0.1, 0.0571846, 0.011)
+mesh = SubResource("BoxMesh_nsn63")
+
+[node name="Bench Back Support 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.004, 0, 0, 0, 0.0128735, -0.000139173, 0, 0.00180925, 0.000990268, 0, 0.057, 0.011)
+mesh = SubResource("BoxMesh_nsn63")
+
+[node name="Bench Back Support 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.004, 0, 0, 0, 0.0128735, -0.000139173, 0, 0.00180925, 0.000990268, -0.1, 0.057, 0.011)
+mesh = SubResource("BoxMesh_nsn63")
+
+[node name="Bench Back" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, -0.00059475, -0.0143214, 0, 0.00190952, -0.00446062, 0, 0.0652307, 0.0117558)
+mesh = SubResource("BoxMesh_gn0ur")
+
+[node name="Bench Leg 1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.002, 0, 0, 0, 0.015, 0, 0, 0, 0.005, -0.146226, 0.0416362, 0.00230064)
+mesh = SubResource("BoxMesh_3sstj")
+
+[node name="Bench Leg 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.002, 0, 0, 0, 0.015, 0, 0, 0, 0.005, 0.146, 0.042, 0.002)
+mesh = SubResource("BoxMesh_3sstj")
+
+[node name="Bench Leg 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.002, 0, 0, 0, 0.015, 0, 0, 0, 0.005, 0.0378219, 0.042, 0.002)
+mesh = SubResource("BoxMesh_3sstj")
+
+[node name="Bench Leg 4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.002, 0, 0, 0, 0.015, 0, 0, 0, 0.005, -0.038, 0.042, 0.002)
+mesh = SubResource("BoxMesh_3sstj")
+
+[node name="Bench Leg 5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.005, 0, 0, 0, 0.002, 0, 0, 0, 0.01, 0.146, 0.035486, 0.00199777)
+mesh = SubResource("BoxMesh_3sstj")
+
+[node name="Bench Leg 6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.005, 0, 0, 0, 0.002, 0, 0, 0, 0.01, 0.038, 0.035, 0.002)
+mesh = SubResource("BoxMesh_3sstj")
+
+[node name="Bench Leg 7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.005, 0, 0, 0, 0.002, 0, 0, 0, 0.01, -0.038, 0.035, 0.002)
+mesh = SubResource("BoxMesh_3sstj")
+
+[node name="Bench Leg 8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.005, 0, 0, 0, 0.002, 0, 0, 0, 0.01, -0.146, 0.035, 0.002)
+mesh = SubResource("BoxMesh_3sstj")

@@ -1,4 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://clwrsdsnmy3md"]
+[gd_scene load_steps=14 format=3 uid="uid://clwrsdsnmy3md"]
+
+[ext_resource type="PackedScene" uid="uid://4sy4oeoj170" path="res://part_b.tscn" id="1_ys316"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6jki"]
 
@@ -45,7 +47,7 @@ mesh = SubResource("PlaneMesh_m6jki")
 surface_material_override/0 = SubResource("StandardMaterial3D_ys316")
 
 [node name="Big floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.67902, 0, 0, 0, 1, 0, 0, 0, 2.65012, -0.00346583, 0.029474, -0.00659442)
+transform = Transform3D(2.679, 0, 0, 0, 1, 0, 0, 0, 3.5, -0.00346583, 0.029474, -0.00659442)
 mesh = SubResource("PlaneMesh_ys316")
 skeleton = NodePath("../PlaceholderFloor")
 
@@ -148,3 +150,15 @@ mesh = SubResource("PlaneMesh_3xb3d")
 [node name="Yard line11" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 2.4, 5.314, 0.031, 0)
 mesh = SubResource("PlaneMesh_3xb3d")
+
+[node name="Bench 1" parent="." instance=ExtResource("1_ys316")]
+transform = Transform3D(6.18019, 0, 0, 0, 4.8667, 0, 0, 0, 4.74854, 5.58684, -0.129758, 3.355)
+
+[node name="Bench 2" parent="." instance=ExtResource("1_ys316")]
+transform = Transform3D(-6.18019, 0, -4.15131e-07, 0, 4.8667, 0, 5.40289e-07, 0, -4.74854, 5.587, -0.13, -3.355)
+
+[node name="Bench 3" parent="." instance=ExtResource("1_ys316")]
+transform = Transform3D(6.18019, 0, 0, 0, 4.8667, 0, 0, 0, 4.74854, -5.587, -0.13, 3.355)
+
+[node name="Bench 4" parent="." instance=ExtResource("1_ys316")]
+transform = Transform3D(-6.18019, 0, -4.15131e-07, 0, 4.8667, 0, 5.40289e-07, 0, -4.74854, -5.587, -0.13, -3.355)
